@@ -1,0 +1,97 @@
+/* 基本のスタイル */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 100vh;
+    flex-direction: column;
+    overflow-y: auto;
+  }
+  
+  .container {
+    width: 100%;
+    max-width: 960px; /* PC向けの最大幅 */
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  .card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    position: relative; /* コンテンツ表示時に他の要素を圧迫しないようにする */
+  }
+  
+  h1 {
+    margin: 0;
+    font-size: 2rem;
+  }
+  
+  ul {
+    padding-left: 20px;
+  }
+  
+  button.toggle-btn {
+    padding: 10px 20px;
+    margin: 20px 0;
+    font-size: 1rem;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    z-index: 1; /* ボタンが他のコンテンツに隠れないようにする */
+  }
+  
+  button.toggle-btn:hover {
+    background-color: #45a049;
+  }
+  
+  .content {
+    display: none; /* 初めは非表示 */
+    padding: 15px;
+    background-color: #f0f0f0;
+    margin-top: 15px;
+    border-radius: 5px;
+    position: relative; /* コンテンツをボタンの下に表示 */
+    z-index: 0; /* コンテンツがボタンの下に表示されるようにする */
+  }
+  
+  .content img {
+    width: 100%; /* 親コンテナに収まるように画像の幅を調整 */
+    max-width: 600px; /* 画像の最大幅 */
+    height: auto; /* 高さは自動調整 */
+  }
+  
+  /* メディアクエリ（PC向け） */
+  @media (min-width: 768px) {
+    .container {
+      width: 960px; /* PC向けの固定幅 */
+    }
+  }
+  
+  /* メディアクエリ（スマホ向け） */
+  @media (max-width: 767px) {
+    .container {
+      width: 100%; /* スマホ向けの横幅100% */
+      padding: 10px;
+    }
+  
+    .card {
+      padding: 15px;
+    }
+  
+    h1 {
+      font-size: 1.5rem;
+    }
+  
+    button.toggle-btn {
+      font-size: 0.9rem;
+    }
+  }
+  
