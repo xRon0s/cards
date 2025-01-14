@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
         toggleBtn.textContent = '表示を閉じる';
       } else {
         content.style.display = 'none';
-        toggleBtn.textContent = '1.1.1.1から1.4.4.4まで';
+        toggleBtn.textContent = '1.1.1.1から1.4.4.4まで,ここをクリック！';
       }
     });
   });
